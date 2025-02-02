@@ -1,0 +1,23 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 20%;
+  }
+
+  .container {
+    padding: 2px 16px;
+  }
+
+
+  .image-container {
+    display: flex; /* Aligns images in a row */
+    justify-content: center; /* Centers images */
+    align-items: center; /* Aligns them vertically */
+    gap: 20px; /* Adds space between images */
+    padding: 20px; /* Adds some padding */
+}
+
+.image-container img {
+    max-width: 150px; /* Adjust size as needed */
+    height: auto;
+}
