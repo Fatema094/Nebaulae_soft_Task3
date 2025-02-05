@@ -15,11 +15,18 @@
         <div class="container mx-auto flex justify-between items-center">
             <!-- Logo -->
             <div class="text-xl font-bold">
-                <img src="image/Logo.svg" alt="Logo" class="h-10 ">
+                <img src="image/Logo.svg" alt="Logo" class="h-10">
             </div>
 
+            <!-- Hamburger Menu for Small Screens -->
+            <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
             <!-- Navigation Links -->
-            <ul class="hidden md:flex space-x-6 text-gray-700">
+            <ul id="menu" class="hidden md:flex space-x-6 text-gray-700 md:items-center md:space-x-6">
                 <li><a href="#" class="hover:text-blue-500">Home</a></li>
                 <li><a href="#" class="hover:text-blue-500">About Us</a></li>
                 <li><a href="#" class="hover:text-blue-500">Services</a></li>
@@ -33,10 +40,19 @@
                 <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-600">Get in Touch</a>
             </div>
         </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-md mt-2 p-4 space-y-2">
+            <a href="#" class="block text-gray-700 hover:text-blue-500">Home</a>
+            <a href="#" class="block text-gray-700 hover:text-blue-500">About Us</a>
+            <a href="#" class="block text-gray-700 hover:text-blue-500">Services</a>
+            <a href="#" class="block text-gray-700 hover:text-blue-500">Products</a>
+            <a href="#" class="block text-gray-700 hover:text-blue-500">Careers</a>
+            <a href="#" class="block text-gray-700 hover:text-blue-500">Contacts</a>
+            <a href="#" class="block bg-blue-500 text-white text-center py-2 rounded-lg shadow hover:bg-blue-600">Get in Touch</a>
+        </div>
     </nav>
 </div>
-
-
 
 
 <div class="container py-10 px-4 rounded-lg relative">
@@ -57,11 +73,11 @@
 </section>
 <section class="relative px-5 py-5">
     <!-- Background Image Container -->
-    <div class="relative w-1/2">
+    <div class="relative w-full md:w-1/2">
         <img src="image/bg.png" alt="Background" class="w-full h-auto">
 
         <!-- Text Overlay on Left Corner -->
-        <div class="absolute top-0 left-0 p-5 bg-black bg-opacity-50 text-white">
+        <div class="absolute top-0 left-0 p-5 bg-black bg-opacity-50 text-white w-full md:w-auto">
             <h1 class="text-3xl font-bold">Our Mission</h1>
             <ol class="space-y-2">
                 <li>Deliver Intelligent Security Solutions</li>
@@ -80,13 +96,12 @@
         </div>
     </div>
 
-
-    <div class="relative w-1/4 py-10">
+    <div class="relative w-full md:w-1/4 py-10">
         <img src="image/bg.png" alt="Background" class="w-full h-auto">
 
         <!-- Text Overlay on Left Corner -->
-        <div class="absolute top-0 left-0 p-5 bg-black bg-opacity-0 text-white py-10">
-            <h1 class="text-3xl font-bold ">Core Values</h1>
+        <div class="absolute top-0 left-0 p-5 bg-black bg-opacity-50 md:bg-opacity-0 text-white py-10 w-full md:w-auto">
+            <h1 class="text-3xl font-bold">Core Values</h1>
             <ol class="space-y-2">
                 <li>Innovation Excellence</li>
                 <li>Customer-Centric Approach</li>
@@ -95,10 +110,8 @@
                 <li>Adaptability and Agility</li>
                 <li>Future-Driven Vision</li>
             </ol>
-
         </div>
     </div>
-    
 </section>
 
 <img src="image/Logo.svg" alt="Logo" class="h-30 px-5 py-5">
@@ -161,7 +174,7 @@
 <section>
 
     <h1 class=" py-5 px-10 w-1/2" style="font-size: 50px;">Trusted Collaborators And strategic Partners</h1>
-    <div class="image-container">
+    <div class="image-container flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 items-center justify-center">
     <img src="image/AiHouse.png" alt="">
     <img src="image/Bionica.png" alt="">
     <img src="image/SIgmind.png" alt="">
@@ -202,42 +215,47 @@
 </section>
 
 
-<div class="bg-black text-white flex items-center justify-start p-5 space-x-10">
-    <img src="image/Logo.svg" alt="Logo" class="h-20">
-    <span class="px-5"><h4>company</h4> <br>
-        About <br>
-        Careers <br>
-        products <br>
-        contacts
-    </span>
-    <span class="px-5"><h4 class="py-5">Services</h4> <br>
-        AI Consultancy <br>
-        Custom AI Solutions <br>
-        Data Analytics and Insights <br>
-        Software Integration and Deployment
+<div class="bg-black text-white p-5">
+    <div class="flex flex-col md:flex-row md:items-start md:justify-start md:space-x-10 space-y-5 md:space-y-0">
+        <img src="image/Logo.svg" alt="Logo" class="h-20 mx-auto md:mx-0">
 
-    </span>
+        <span class="px-5 text-center md:text-left">
+            <h4 class="font-bold">Company</h4>
+            <p>About</p>
+            <p>Careers</p>
+            <p>Products</p>
+            <p>Contacts</p>
+        </span>
 
-    <span class="px-5"><h4 class="py-5">Email</h4> <br>
-        info@trimatric.com <br>
+        <span class="px-5 text-center md:text-left">
+            <h4 class="font-bold py-2">Services</h4>
+            <p>AI Consultancy</p>
+            <p>Custom AI Solutions</p>
+            <p>Data Analytics and Insights</p>
+            <p>Software Integration and Deployment</p>
+        </span>
 
-       <h4 class="py-5">Call Center</h4>  <br>
-        +880 1886-636200
+        <span class="px-5 text-center md:text-left">
+            <h4 class="font-bold py-2">Email</h4>
+            <p>info@trimatric.com</p>
 
-    </span>
+            <h4 class="font-bold py-2">Call Center</h4>
+            <p>+880 1886-636200</p>
+        </span>
 
-    <span class="px-5">Our Location <br>
-        125 Ramna Century Avenue, Boro Moghbazar, Dhaka-1217 Bangladesh <br>
-        Eisenwerkstraße 4/4, 4020 Linz, Austria <br>
+        <span class="px-5 text-center md:text-left">
+            <h4 class="font-bold">Our Location</h4>
+            <p>125 Ramna Century Avenue, Boro Moghbazar, Dhaka-1217, Bangladesh</p>
+            <p>Eisenwerkstraße 4/4, 4020 Linz, Austria</p>
 
-        <h4 class="py-5">Social network</h4> <br>
-       <i class="fa fa-linkedin px-4" aria-hidden="true"></i>
-       <i class="fa fa-facebook px-4" aria-hidden="true"></i>
-       <i class="fa fa-youtube-play px-4" aria-hidden="true"></i>
-       
-
-
-    </span>
+            <h4 class="font-bold py-2">Social Network</h4>
+            <div class="flex justify-center md:justify-start space-x-4">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            </div>
+        </span>
+    </div>
 </div>
 
 <div class="bg-black text-white flex items-center justify-start p-5 space-x-10 py-10">
@@ -267,7 +285,7 @@
     <span style="float: right;">Privacy Policy. Terms & Conditions</span>
 </div>
 
-    
+<script src="script.js"></script>
     
 </body>
 </html>
